@@ -1,0 +1,120 @@
+.FormCatalogWrap {
+  width: 360px;
+}
+
+.label {
+  display: inline-block;
+  color: var(--middle-grey);
+  margin-bottom: 8px;
+}
+
+.fieldLocationWrap {
+  position: relative;
+}
+
+.fieldLocation {
+  display: block;
+  width: 100%;
+  height: 56px;
+  background-color: var(--light-grey);
+  border-color: transparent;
+  border-radius: 12px;
+  padding-left: 46px;
+  margin-bottom: 40px;
+}
+
+.fieldForm::placeholder {
+  color: var(--middle-grey);
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 18px;
+  left: 20px;
+}
+
+.iconMap {
+  fill: var(--middle-grey);
+}
+
+.activeFieldLocation {
+  fill: currentColor;
+}
+
+.textFilters {
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--second-color);
+  margin-bottom: 32px; 
+
+}
+
+.filterList {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 8px;
+  column-gap: 12px;
+  margin-bottom: 32px;
+}
+
+.filterList.vehicle {
+
+  margin-bottom: 40px;
+}
+
+.filterItem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* width: calc((100% /3) -( 2*12px)); */
+  width: 112px;
+  height: 96px;
+  border-radius: 12px;
+  border: 1px solid var(--middle-grey);
+}
+
+.filterItemWrap{
+  height: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.fullyIntergrated {
+  height: 88px;
+}
+
+.fullyIntergrated>p {  
+  text-align: center;
+}
+
+.filterIcon {
+  width: 32px;
+  height: 32px;
+}
+
+
+
+.btnSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0em;
+
+  width: 166px;
+  height: 56px;
+  padding: 16px 60px;
+
+  background-color: var(--red2-color);
+
+  border-radius: 200px;
+  border-color: transparent;
+
+  width: 53px;
+  height: 24px;
+  color: var(--white);
+}

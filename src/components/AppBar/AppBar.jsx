@@ -7,14 +7,16 @@ import Container from "../Container/Container";
 
 const AppBar = () => {
   return (
-    <Container>
-      <header className={css.header}>
-        <Link to="/" className={css.logo}>
-          Travel<span className={css.logoTrack}>Tracks</span>
-        </Link>
-        <Navigation />
-      </header>
-    </Container>
+    <div className={css.AppBarWrap}>
+      <Container>
+        <header className={css.header}>
+          <Link to="/" className={css.logo}>
+            Travel<span className={css.logoTrack}>Tracks</span>
+          </Link>
+          <Navigation />
+        </header>
+      </Container>
+    </div>
   );
 };
 

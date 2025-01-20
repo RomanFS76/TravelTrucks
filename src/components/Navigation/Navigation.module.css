@@ -2,16 +2,12 @@
   display: flex;
   justify-content: space-between;
   width: 138px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
 }
 
 .link {
-  color: #101828;
-  text-decoration: none;
+  color: currentColor;
 }
 
 .isActive {
-  color: #d84343;
+  color: var(--red-color);
 }

@@ -1,34 +1,18 @@
+.AppBarWrap {
+  background-color: var(--bg-light-grey);
+}
 .header {
   display: flex;
   padding: 24px 0;
 }
-.nav {
-  display: flex;
-  justify-content: space-between;
-  width: 138px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-}
 
 .logo {
   margin-right: 450px;
-  text-decoration: none;
   font-size: 20px;
   font-weight: 800;
-  color: #101828;
+  color: currentColor;
 }
 
 .logoTrack {
-  color: #475467;
+  color: var(--second-color);
 }
-
-.link {
-  color: #101828;
-  text-decoration: none;
-}
-
-.isActive {
-    color: #d84343;
-}
-

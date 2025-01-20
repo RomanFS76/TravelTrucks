@@ -12,25 +12,22 @@
   height: 696px;
 }
 
-
 h1 {
-
   font-weight: 600;
   font-size: 48px;
   line-height: 1.5;
   text-align: left;
-  color: #f7f7f7;
+  color: var(--light-grey);
 }
 
-p {
-
+.text {
   font-weight: 600;
   font-size: 24px;
-  line-height: 32px;
+  line-height: 1.5;
   text-align: left;
   margin-bottom: 40px;
 
-  color: #f7f7f7;
+  color: var(--light-grey);
 }
 
 .linkViewNow {
@@ -40,13 +37,10 @@ p {
   width: 173px;
   height: 56px;
 
-  background-color: #e44848;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
+  background-color: var(--red2-color);
   letter-spacing: 0em;
   text-align: left;
-  color: #ffffff;
+  color: var(--white);
   text-decoration: none;
   border-radius: 200px;
 }
