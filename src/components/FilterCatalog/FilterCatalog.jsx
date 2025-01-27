@@ -6,13 +6,23 @@ import icon from "../../../public/sprite.svg";
 
 const initialValues = { location: "" };
 
-const handleSubmit = (values, actions) => {
-  actions.resetForm();
-  console.log(values);
-};
-
 const FormCatalog = () => {
+  const [isActive, setIsActive] = useState([]);
   const locationFieldId = useId();
+
+  const handleFilterClick = (filter) => {
+    setIsActive((isActive) => {
+      isActive.includes(filter)
+        ? isActive.filter((item) => item !== filter)
+        : [...isActive, ...filter];
+    });
+    console.log(isActive);
+  };
+
+  const handleSubmit = (values, actions) => {
+    actions.resetForm();
+    console.log(values);
+  };
 
   return (
     <div className={css.FormCatalogWrap}>
@@ -37,7 +47,10 @@ const FormCatalog = () => {
           <p className={css.textFilters}>Filters</p>
           <h3>Vehicle equipment</h3>
           <ul className={css.filterList}>
-            <li className={css.filterItem}>
+            <li
+              className={css.filterItem}
+              onClick={() => handleFilterClick("AC")}
+            >
               <div className={css.filterItemWrap}>
                 <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-ac`} />
@@ -45,7 +58,10 @@ const FormCatalog = () => {
                 <p>AC</p>
               </div>
             </li>
-            <li className={css.filterItem}>
+            <li
+              className={css.filterItem}
+              onClick={() => handleFilterClick("Automatic")}
+            >
               <div className={css.filterItemWrap}>
                 <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-transmission`} />
@@ -53,7 +69,10 @@ const FormCatalog = () => {
                 <p>Automatic</p>
               </div>
             </li>
-            <li className={css.filterItem}>
+            <li
+              className={css.filterItem}
+              onClick={() => handleFilterClick("Kitchen")}
+            >
               <div className={css.filterItemWrap}>
                 <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-kitchen`} />
@@ -61,7 +80,10 @@ const FormCatalog = () => {
                 <p>Kitchen</p>
               </div>
             </li>
-            <li className={css.filterItem}>
+            <li
+              className={css.filterItem}
+              onClick={() => handleFilterClick("TV")}
+            >
               <div className={css.filterItemWrap}>
                 <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-tv`} />
@@ -69,7 +91,10 @@ const FormCatalog = () => {
                 <p>TV</p>
               </div>
             </li>
-            <li className={css.filterItem}>
+            <li
+              className={css.filterItem}
+              onClick={() => handleFilterClick("Bathroom")}
+            >
               <div className={css.filterItemWrap}>
                 <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-bathroom`} />
@@ -98,7 +123,7 @@ const FormCatalog = () => {
             </li>
             <li className={css.filterItem}>
               <div className={clsx(css.filterItemWrap)}>
-                <svg className={clsx(css.filterIcon) }>
+                <svg className={clsx(css.filterIcon)}>
                   <use href={`${icon}#icon-alcove`} />
                 </svg>
                 <p>Alcove</p>

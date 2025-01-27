@@ -1,5 +1,7 @@
 :root {
-  /* var(--main-color) */
+  display: flex;
+  justify-content: center;
+  /*  */
   --main-color: #101828;
 
   /* var(--second-color) */
@@ -43,12 +45,18 @@ p {
   margin: 0;
 }
 
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(32 / 24);
+}
+
 h3 {
   font-weight: 600;
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid  var( --middle-grey);
+  border-bottom: 1px solid var(--middle-grey);
   margin-bottom: 24px;
 }
 
@@ -62,6 +70,7 @@ ol {
 img {
   display: block;
   max-width: 100%;
+  object-fit: none;
 }
 
 a {
