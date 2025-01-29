@@ -24,6 +24,9 @@
 
   /* var( --middle-grey) */
   --middle-grey: #6c717b;
+
+    /* var( --btn-color) */
+    --btn-color:#DADDE1;
 }
 
 body {
@@ -75,4 +78,8 @@ img {
 
 a {
   text-decoration: none;
+}
+
+button {
+  padding: 0;
 }

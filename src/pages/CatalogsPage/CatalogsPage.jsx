@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import FilterCatalog from "../../components/FilterCatalog/FilterCatalog";
 import Catalog from "../../components/Catalog/Catalog";
 import Container from "../../components/Container/Container";
@@ -12,19 +12,19 @@ const CatalogsPage = () => {
   const loading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
 
-  useEffect(() => {
-    dispatch(getAllCampers());
-  }, [dispatch]);
+  const [page, setPage] = useState(1);
 
-  
+
+  useEffect(() => {
+    dispatch(getAllCampers(page));
+  }, [page]);
 
   return (
-    
     <div className={css.catalogsPageWrap}>
       <Container>
         <div className={css.catalogWrap}>
           <FilterCatalog />
-          {loading ? <b>Loading page...</b>:<Catalog />}
+          {loading ? <b>Loading page...</b> : <Catalog page={page} setPage={setPage} />}
           {error && <b>We have some problems</b>}
         </div>
       </Container>
