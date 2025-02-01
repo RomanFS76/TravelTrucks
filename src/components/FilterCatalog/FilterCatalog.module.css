@@ -47,8 +47,7 @@
   font-size: 16px;
   line-height: 1.5;
   color: var(--second-color);
-  margin-bottom: 32px; 
-
+  margin-bottom: 32px;
 }
 
 .filterList {
@@ -60,7 +59,6 @@
 }
 
 .filterList.vehicle {
-
   margin-bottom: 40px;
 }
 
@@ -75,20 +73,19 @@
   border: 1px solid var(--middle-grey);
 }
 
-.filterItemWrap{
+.filterItemWrap {
   height: 64px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  
 }
 
 .fullyIntergrated {
   height: 88px;
 }
 
-.fullyIntergrated>p {  
+.fullyIntergrated > p {
   text-align: center;
 }
 
@@ -96,8 +93,6 @@
   width: 32px;
   height: 32px;
 }
-
-
 
 .btnSearch {
   display: flex;
@@ -112,4 +107,8 @@
   border-radius: 200px;
   border-color: transparent;
   color: var(--white);
+}
+
+.btnSearch:hover {
+  background-color:var(--red-color);
 }

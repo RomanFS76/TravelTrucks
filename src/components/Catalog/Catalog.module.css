@@ -124,3 +124,7 @@
   border: 1px solid var(--btn-color);
   border-radius: 200px;
 }
+
+.btnLoadMore:hover {
+  border-color:  var(--red-color);
+}
