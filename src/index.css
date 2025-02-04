@@ -59,7 +59,7 @@ h3 {
   font-size: 20px;
   line-height: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--middle-grey);
+  border-bottom: 1px solid var( --btn-color);
   margin-bottom: 24px;
 }
 
@@ -83,3 +83,11 @@ a {
 button {
   padding: 0;
 }
+
+.link {
+  background-color: var(--red2-color) ;
+  letter-spacing: 0em;
+  color:var(--white);
+}
+
+

@@ -1,0 +1,103 @@
+.topInfoWrap {
+  margin-bottom: 60px;
+}
+
+.infoWrap {
+  margin-bottom: 28px;
+}
+
+h2.camperName {
+  margin-bottom: 8px;
+}
+
+.catalogReviewsRatingWrap {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+
+.icon {
+  height: 20px;
+  width: 20px;
+}
+
+.iconStar {
+  fill: #ffc531;
+  margin-right: 4px;
+}
+
+.iconMap {
+  margin-right: 4px;
+}
+
+.catalogReviewsRating {
+  margin-right: 16px;
+}
+
+.camperPrice {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: calc(32 / 24);
+}
+/* Images Camper */
+
+.imgCamperList {
+  display: flex;
+  height: 312px;
+  gap: 48px;
+  margin-bottom: 28px;
+}
+
+.imgCamperItem {
+  width: calc((100% - 48px * 2) / 3);
+  height: auto;
+}
+.img {
+  height: 100%;
+}
+
+.camperDesc {
+  font-weight: 400;
+  font-style: normal;
+  color: var(--second-color);
+}
+
+/* Features   Reviews */
+
+.linkCatalog {
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  color: #101828;
+  padding-bottom: 24px;
+  margin-bottom: -2px;
+}
+
+.linkWrap {
+  display: flex;
+  gap: 40px;
+  border-bottom: 1px solid var(--btn-color);
+  margin-bottom: 44px;
+}
+
+.isActive {
+  border-bottom: 4px solid var(--red2-color);
+}
+
+.featuresReviewsFormWrap {
+  display: flex; 
+  min-height: 631px;
+  gap: 40px;
+}
+
+.flexItem {
+    width: calc((100% - 40px) /2);
+
+    
+}
+
+.featuresReviewsWrap {
+    background-color:var(--light-grey);
+    padding: 44px 52px;
+    border-radius: 10px;
+}

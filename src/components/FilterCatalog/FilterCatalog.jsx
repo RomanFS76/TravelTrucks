@@ -4,6 +4,7 @@ import css from "./FilterCatalog.module.css";
 import clsx from "clsx";
 import icon from "../../../public/sprite.svg";
 
+
 const initialValues = { location: "" };
 
 const FormCatalog = () => {

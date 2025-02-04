@@ -4,6 +4,8 @@ import clsx from "clsx";
 import css from "./Catalog.module.css";
 import icon from "../../../public/sprite.svg";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 const Catalog = ({ page, setPage }) => {
   const campers = useSelector(selectCampers);
@@ -29,7 +31,7 @@ const Catalog = ({ page, setPage }) => {
             description,
           }) => {
             return (
-              <li className={css.catalogCard} key={id}>
+              <li className={css.catalogCard} key={uuidv4()}>
                 <div className={css.cardImg}>
                   <img className={css.img} src={gallery[0].thumb} alt={name} />
                 </div>
@@ -54,88 +56,76 @@ const Catalog = ({ page, setPage }) => {
                     <p>{location}</p>
                   </div>
                   <p className={css.camperDescription}>{description}</p>
+                  <ul className={css.equipmentList}>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-transmission`} />
+                      </svg>
+                      <p>{transmission}</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-fuel-pump`} />
+                      </svg>
+                      <p>{engine}</p>
+                    </li>
 
-                  {/* equipment */}
-
-                  {/* <ul className={css.equipmentList}>
-
-              {Object.entries(campers).map(([key, value]) => (
-                    value === "true" ? <li key={key}>{key}</li> : null
-                ))}
-                <li className={css.equipmentItem}></li>
-              </ul> */}
-
-                  {
-                    <ul className={css.equipmentList}>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-transmission`} />
-                        </svg>
-                        <p>{transmission}</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-fuel-pump`} />
-                        </svg>
-                        <p>{engine}</p>
-                      </li>
-
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-ac`} />
-                        </svg>
-                        <p>AC</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-bathroom`} />
-                        </svg>
-                        <p>Bathroom</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-kitchen`} />
-                        </svg>
-                        <p>Kitchen</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-tv`} />
-                        </svg>
-                        <p>TV</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-radio`} />
-                        </svg>
-                        <p>Radio</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-refrigerator`} />
-                        </svg>
-                        <p>Refrigerator</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-microwave`} />
-                        </svg>
-                        <p>Microwave</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-gas`} />
-                        </svg>
-                        <p>Gas</p>
-                      </li>
-                      <li className={css.equipmentItem}>
-                        <svg className={clsx(css.filterIcon)}>
-                          <use href={`${icon}#icon-water`} />
-                        </svg>
-                        <p>Water</p>
-                      </li>
-                    </ul>
-                  }
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-ac`} />
+                      </svg>
+                      <p>AC</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-bathroom`} />
+                      </svg>
+                      <p>Bathroom</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-kitchen`} />
+                      </svg>
+                      <p>Kitchen</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-tv`} />
+                      </svg>
+                      <p>TV</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-radio`} />
+                      </svg>
+                      <p>Radio</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-refrigerator`} />
+                      </svg>
+                      <p>Refrigerator</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-microwave`} />
+                      </svg>
+                      <p>Microwave</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-gas`} />
+                      </svg>
+                      <p>Gas</p>
+                    </li>
+                    <li className={css.equipmentItem}>
+                      <svg className={clsx(css.filterIcon)}>
+                        <use href={`${icon}#icon-water`} />
+                      </svg>
+                      <p>Water</p>
+                    </li>
+                  </ul>
+                  <Link className={clsx('link', css.showMore)} to={`${id}`}>Show more</Link>
                 </div>
               </li>
             );

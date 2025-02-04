@@ -30,17 +30,11 @@ h1 {
   color: var(--light-grey);
 }
 
-.linkViewNow {
+.viewNow {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 173px;
-  height: 56px;
-
-  background-color: var(--red2-color);
-  letter-spacing: 0em;
-  text-align: left;
-  color: var(--white);
-  text-decoration: none;
+  height: 56px; 
   border-radius: 200px;
 }

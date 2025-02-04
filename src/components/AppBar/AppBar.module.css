@@ -1,5 +1,7 @@
 .AppBarWrap {
   background-color: var(--bg-light-grey);
+  margin-bottom: 48px;
+
 }
 .header {
   display: flex;
